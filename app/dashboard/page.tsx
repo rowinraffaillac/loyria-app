@@ -1,11 +1,14 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 
+// Dashboard redirects to /properties — kept for backwards compat
+
 export default async function DashboardPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
   if (!user) redirect('/login')
+  redirect('/properties')
 
   return (
     <div className="min-h-screen bg-[#0a0a0f]">
