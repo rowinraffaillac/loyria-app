@@ -6,7 +6,7 @@ import type { Property } from '@/lib/types'
 
 const NAV_ITEMS = [
   { href: '', label: 'Vue générale', icon: '◈' },
-  { href: '/locataire', label: 'Locataire', icon: '◉', soon: true },
+  { href: '/locataire', label: 'Locataire', icon: '◉' },
   { href: '/finances', label: 'Finances', icon: '◈', soon: true },
   { href: '/travaux', label: 'Travaux', icon: '◈', soon: true },
   { href: '/documents', label: 'Documents', icon: '◈', soon: true },

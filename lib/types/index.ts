@@ -85,3 +85,88 @@ export const OWNERSHIP_TYPE_LABELS: Record<OwnershipType, string> = {
   indivision: 'Indivision',
   societe: 'Société',
 }
+
+// ─── Locataires ────────────────────────────────────────────
+
+export type TenantStatus = 'actif' | 'sorti' | 'candidat' | 'archive'
+
+export interface Tenant {
+  id: string
+  owner_id: string
+  first_name: string
+  last_name: string
+  email: string | null
+  phone: string | null
+  previous_address: string | null
+  profession: string | null
+  employer: string | null
+  declared_income: number | null
+  deposit_amount: number | null
+  insurance_company: string | null
+  insurance_policy_number: string | null
+  insurance_expiry_date: string | null
+  status: TenantStatus
+  notes: string | null
+  created_at: string
+  updated_at: string
+}
+
+// ─── Baux ──────────────────────────────────────────────────
+
+export type LeaseType =
+  | 'location_nue' | 'location_meublee' | 'bail_etudiant'
+  | 'bail_mobilite' | 'colocation' | 'bail_commercial'
+
+export type LeaseStatus =
+  | 'brouillon' | 'actif' | 'en_attente_signature'
+  | 'resilie' | 'expire' | 'archive'
+
+export type ReferenceIndex = 'irl' | 'icc' | 'ilat'
+
+export interface Lease {
+  id: string
+  property_id: string
+  owner_id: string
+  type: LeaseType
+  start_date: string
+  duration_months: number | null
+  end_date: string | null
+  auto_renewal: boolean
+  rent_amount: number
+  charges_amount: number
+  total_rent: number
+  deposit_amount: number | null
+  payment_day: number
+  index_clause: boolean
+  reference_index: ReferenceIndex
+  last_revision_date: string | null
+  next_revision_date: string | null
+  status: LeaseStatus
+  notes: string | null
+  created_at: string
+  updated_at: string
+}
+
+export const LEASE_TYPE_LABELS: Record<LeaseType, string> = {
+  location_nue: 'Location nue',
+  location_meublee: 'Location meublée',
+  bail_etudiant: 'Bail étudiant',
+  bail_mobilite: 'Bail mobilité',
+  colocation: 'Colocation',
+  bail_commercial: 'Bail commercial',
+}
+
+export const LEASE_STATUS_LABELS: Record<LeaseStatus, string> = {
+  brouillon: 'Brouillon',
+  actif: 'Actif',
+  en_attente_signature: 'En attente de signature',
+  resilie: 'Résilié',
+  expire: 'Expiré',
+  archive: 'Archivé',
+}
+
+export const REFERENCE_INDEX_LABELS: Record<ReferenceIndex, string> = {
+  irl: 'IRL (Indice de Référence des Loyers)',
+  icc: 'ICC (Indice du Coût de la Construction)',
+  ilat: 'ILAT (Indice des Loyers des Activités Tertiaires)',
+}
