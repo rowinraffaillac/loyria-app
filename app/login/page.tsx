@@ -34,17 +34,15 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-3 mb-6">
-            <svg width="32" height="52" viewBox="0 0 60 100" className="rotate-[15deg]">
-              <defs>
-                <linearGradient id="g" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#6366f1" />
-                  <stop offset="100%" stopColor="#10b981" />
-                </linearGradient>
-              </defs>
-              <path d="M30 5 A 50 50 0 0 1 30 95 A 50 50 0 0 1 30 5 Z" fill="url(#g)" />
+            <svg width="36" height="36" viewBox="0 0 28 28">
+              <rect width="28" height="28" rx="4" fill="#1a2744"/>
+              <rect x="5" y="5" width="3" height="12" fill="#C9A84C"/>
+              <rect x="5" y="14" width="10" height="3" fill="#C9A84C"/>
+              <rect x="20" y="9" width="3" height="14" fill="#C9A84C"/>
+              <rect x="13" y="9" width="10" height="3" fill="#C9A84C"/>
             </svg>
             <span className="text-2xl font-bold text-white tracking-wide">
-              <span className="text-[#6366f1]">F</span>LOREO
+              <span className="text-[#C9A84C]">L</span>OYRIA
             </span>
           </div>
           <h1 className="text-xl font-semibold text-white">Connexion</h1>

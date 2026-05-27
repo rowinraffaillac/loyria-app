@@ -12,17 +12,15 @@ export default async function Home() {
     <div className="min-h-screen bg-[#0a0a0f] text-white">
       <nav className="border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
         <div className="flex items-center gap-3">
-          <svg width="24" height="38" viewBox="0 0 60 100" className="rotate-[15deg]">
-            <defs>
-              <linearGradient id="g" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#6366f1" />
-                <stop offset="100%" stopColor="#10b981" />
-              </linearGradient>
-            </defs>
-            <path d="M30 5 A 50 50 0 0 1 30 95 A 50 50 0 0 1 30 5 Z" fill="url(#g)" />
+          <svg width="28" height="28" viewBox="0 0 28 28">
+            <rect width="28" height="28" rx="4" fill="#1a2744"/>
+            <rect x="5" y="5" width="3" height="12" fill="#C9A84C"/>
+            <rect x="5" y="14" width="10" height="3" fill="#C9A84C"/>
+            <rect x="20" y="9" width="3" height="14" fill="#C9A84C"/>
+            <rect x="13" y="9" width="10" height="3" fill="#C9A84C"/>
           </svg>
           <span className="text-lg font-bold tracking-wide">
-            <span className="text-[#6366f1]">F</span>LOREO
+            <span className="text-[#C9A84C]">L</span>OYRIA
           </span>
         </div>
         <div className="flex items-center gap-4">
